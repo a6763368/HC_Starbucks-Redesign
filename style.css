@@ -19,6 +19,13 @@ nav{
     padding: 20px 30px;
     /* ai 格線用的垂直對齊 */
     align-items: center;
+    position: fixed;
+    /* ↓可調整 */
+    top: 0px;
+    width: 100%;
+    z-index: 3;
+    /* 透明度 */
+    opacity: 0.9;
 
 }
 
@@ -89,10 +96,14 @@ nav{
 
 #banner .slick-prey {
     left: 50px;
+    z-index: 2;
+    transform: scale(1.5);
 }
 
 #banner .slick-next {
     right: 50px;
+    z-index: 2;
+    transform: scale(1.5);
 }
 
 #banner .slick-dots {
@@ -184,7 +195,42 @@ nav{
     }
 
     #info .text p {
-        padding: 20px 0;
+        padding: 10px 0 25px;
+        line-height: 2;
+    }
+
+    /*  其他服務  */
+    #service {
+        width: 1280px;
+        margin: 0 auto;
+        margin-top: 100px;    
+    }
+
+    /* focus 聚焦：選取此元素時 */
+    #service div:focus {
+        /* 選取邊框：無 */
+        outline: none;
+    }
+    #service img {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        /* border-radius 若要使用圓形 > 寬高須相同 */
+        object-fit: cover;
+        display: block;
+        /* 顯示模式；區塊 */
+        margin: 0 auto;
+        /* 區塊元素；block */
+        transition: 0.5s;
+    }
+    #service img:hover {
+        border-radius: 5px;
+    }
+
+    #service h2 {
+        text-align: center;
+        margin-top: 10px;
+        color: #aaa;
     }
 
 /* 頁尾 */
